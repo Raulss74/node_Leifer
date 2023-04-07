@@ -6,6 +6,10 @@ const app = express()
 app.use(cors())
 const port = process.env.PORT || 3000
 
+/* Aquí invocamos a las rutas*/
+// TODO localHost/api/------
+app.use("/api",require("./routes/")); 
+
 app.listen(port, ()=>{
     console.log(`http://localhost:${port}`); 
 }) 
