@@ -15,7 +15,7 @@ router.get("/", authMiddleware, getItems);
 router.get("/:id", authMiddleware, validatorGetItem, getItem); 
 
 // Crear un registro 
-router.post("/", authMiddleware, checkRol(['admin']), validatorCreateItem, createItem);  
+router.post("/", authMiddleware, checkRol(['admin', 'user']), validatorCreateItem, createItem);  
 
 // Actualizar un registro
 router.put("/:id", authMiddleware, validatorGetItem, validatorCreateItem, updateItem); 
